@@ -1,13 +1,14 @@
 var assert = {
   isEqual: function(assert, expect) {
     if (assert === expect) {
-      console.log("Test passed: " + assert + " is equal to " + expect)
+      console.log("Test Passed: " + assert + " is equal to " + expect);
       return true;
     }
     else {
-      throw new Error("Expected " + assert + " to equal " + expect + ".");
+      console.log("Test Failed: expected " + assert + " to equal " + expect + ".");
+      return false
     }
-  }
+  },
   isTruthy: function(assert) {
     if (assert){
       console.log("Test passed: " + assert + " is truthy")
@@ -16,7 +17,7 @@ var assert = {
     else {
       throw new Error(assert + " is not true")
     }
-  }
+  },
   isFalsy: function(assert) {
     if (!assert){
       console.log("Test passed: " + assert + " is falsy")
