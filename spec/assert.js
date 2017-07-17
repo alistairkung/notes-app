@@ -5,7 +5,8 @@ var assert = {
       return true;
     }
     else {
-      console.log("Expected " + assert + " to equal " + expect + ".");
+      console.log("Test failed: expected " + assert + " to equal " + expect + ".");
+      return false
     }
   },
   isTruthy: function(assert) {
