@@ -7,24 +7,24 @@ var assert = {
       return false;
     }
   }
-  isTruthy: function(a) {
-    if (a){
-      console.log("Test passed: " + a + " is truthy")
+  isTruthy: function(assert) {
+    if (assert){
+      console.log("Test passed: " + assert + " is truthy")
       return true
     }
     else {
       return false
-      throw new Error(a + "is not true")
+      throw new Error(assert + "is not true")
     }
   }
-  isFalsey: function(a) {
-    if (!a){
-      console.log("Test passed: " + a + " is falsey")
+  isFalsey: function(assert) {
+    if (!assert){
+      console.log("Test passed: " + assert + " is falsey")
       return true
     }
     else {
       return false
-      throw new Error(a + "is true")
+      throw new Error(assert + "is true")
     }
   }
 };
