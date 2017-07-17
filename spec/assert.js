@@ -1,7 +1,7 @@
 var assert = {
   isEqual: function(assert, expect) {
     if (assert === expect) {
-      console.log("Test Passed: " + assert + " is equal to " + expect);
+      console.log("Test passed: " + assert + " is equal to " + expect);
       return true;
     }
     else {
