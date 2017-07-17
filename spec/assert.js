@@ -13,18 +13,16 @@ var assert = {
       return true
     }
     else {
-      return false
-      throw new Error(assert + "is not true")
+      throw new Error(assert + " is not true")
     }
   }
-  isFalsey: function(assert) {
+  isFalsy: function(assert) {
     if (!assert){
-      console.log("Test passed: " + assert + " is falsey")
+      console.log("Test passed: " + assert + " is falsy")
       return true
     }
     else {
-      return false
-      throw new Error(assert + "is true")
+      throw new Error(assert + " is true")
     }
   }
 };
