@@ -11,20 +11,22 @@ var assert = {
   },
   isTruthy: function(assert) {
     if (assert){
-      console.log("Test passed: " + assert + " is truthy")
+      console.log("Test Passed: " + assert + " is truthy")
       return true
     }
     else {
-      throw new Error(assert + " is not true")
+      console.log("Test Failed: expected " + assert + " to be truthy.");
+      return false;
     }
   },
   isFalsy: function(assert) {
     if (!assert){
-      console.log("Test passed: " + assert + " is falsy")
+      console.log("Test Passed: " + assert + " is falsy")
       return true
     }
     else {
-      throw new Error(assert + " is true")
+      console.log("Test Failed: expected " + assert + " to be falsy.");
+      return false;
     }
   }
 };
