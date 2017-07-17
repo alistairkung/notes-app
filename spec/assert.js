@@ -5,9 +5,9 @@ var assert = {
       return true;
     }
     else {
-      throw new Error("Expected " + assert + " to equal " + expect + ".");
+      console.log("Expected " + assert + " to equal " + expect + ".");
     }
-  }
+  },
   isTruthy: function(assert) {
     if (assert){
       console.log("Test passed: " + assert + " is truthy")
@@ -16,7 +16,7 @@ var assert = {
     else {
       throw new Error(assert + " is not true")
     }
-  }
+  },
   isFalsy: function(assert) {
     if (!assert){
       console.log("Test passed: " + assert + " is falsy")
