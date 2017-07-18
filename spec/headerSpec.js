@@ -1,11 +1,15 @@
 
+
+  function createHeader() {
+    var createdHeader = document.createElement("h1");
+    createdHeader.innerHTML = "Notes";
+    document.body.appendChild(createdHeader);
+    return createdHeader
+  };
+
+  var createdHeader = createHeader();
+
 // header spec
 
-var header = document.createElement("h1")
-header.id="title";
-header.innerHTML = "Some title";
-document.body.appendChild(header);
-var newHeader = document.getElementsByTagName("H1")[0];
-assert.isEqual(header, newHeader)
-
-// header production code.
+var grabbedHeader = document.getElementsByTagName("H1")[0];
+assert.isEqual(createdHeader, grabbedHeader)
