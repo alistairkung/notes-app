@@ -1,4 +1,4 @@
-createForm();
+htmlGen.createForm();
 
 // form is of the correct type
 assert.isEqual(document.getElementById("notes-form").localName, "form")
