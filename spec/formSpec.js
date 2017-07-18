@@ -11,3 +11,11 @@ assert.isEqual(document.getElementById("notes-form").id, "notes-form");
 
 // textarea has the correct ID
 assert.isEqual(document.getElementById("notes-input").id, "notes-input");
+
+htmlGen.createButton();
+
+// button is of the correct type
+assert.isEqual(document.getElementById("btn").localName, "button")
+
+// button
+assert.isEqual(document.getElementById("btn").innerHTML, "Submit")
