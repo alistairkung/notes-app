@@ -12,7 +12,7 @@ list.addNote(note2);
 htmlGen.createList();
 
 // Add notes to unordered list
-list.notes.forEach(htmlGen.createListItem);
+list._notes.forEach(htmlGen.createListItem);
 
 var retrievedNote = document.getElementsByTagName("li")[1].innerHTML;
 
