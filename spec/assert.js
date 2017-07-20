@@ -1,32 +1,33 @@
 var assert = {
-  isEqual: function(assert, expect) {
+  isEqual: function(assert, expect, description) {
     if (assert === expect) {
-      console.log("Test passed: " + assert + " is equal to " + expect);
-      return true;
+      this.logPass(description)
     }
     else {
-      console.log("Test failed: expected " + assert + " to equal " + expect + ".");
-      return false
+      this.logFail(description)
     }
   },
-  isTruthy: function(assert) {
+  isTruthy: function(assert, description) {
     if (assert){
-      console.log("Test passed: " + assert + " is truthy")
-      return true
+      this.logPass(description)
     }
     else {
-      console.log("Test failed: expected " + assert + " to be truthy.");
-      return false;
+      this.logFail(description)
     }
   },
-  isFalsy: function(assert) {
+  isFalsy: function(assert, description) {
     if (!assert){
-      console.log("Test passed: " + assert + " is falsy")
-      return true
+      this.logPass(description)
     }
     else {
-      console.log("Test failed: expected " + assert + " to be falsy.");
-      return false;
+      this.logFail(description)
     }
+  },
+
+  logPass: function (description) {
+    console.log("Pass: " + description);
+  },
+  logFail: function (description) {
+    console.error("Fail: " + description);
   }
 };
